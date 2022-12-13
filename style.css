@@ -1,0 +1,223 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* FONTS AND STYLES */
+
+:root {
+    --bg-orange: hsl(25, 97%, 53%);
+
+    --clr-White: hsl(0, 0%, 100%);
+    --clr-Light: hsl(217, 12%, 63%);
+    --clr-Medium: hsl(216, 12%, 25%);
+    --clr-Dark: hsl(213, 19%, 15%);
+    --clr-Very: hsl(216, 12%, 8%);
+
+    --keyframe: smooth 1s 
+}
+
+* {
+    font-family: 'Oveerpass', sans-serif;
+}
+
+/* NORMAL CSS */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-Very);
+}
+
+.container {
+    width: min(90%, 350px);
+    background-color: var(--clr-Dark);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 1.5em;
+    gap: 1.5em;
+}
+
+.img {
+    background-color: var(--clr-Medium);
+    padding: .6em;
+    border-radius: 100px;
+}
+
+.text-container h3{
+    color: var(--clr-White);
+    letter-spacing: .2px;
+}
+
+.text-container p {
+    color: var(--clr-Light);
+    font-size: 13px;
+    margin-top: .5em;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.submit-btn {
+    background-color: var(--bg-orange);
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+    padding-block: .5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    opacity: .9;
+    transition: .4s ease;
+}
+
+.options-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.option-btn {
+    background-color: var(--clr-Medium);
+    color: var(--clr-Light);
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.option-btn:hover {
+    background-color: var(--bg-orange);
+    transition: .4s ease;
+    color: white;
+}
+
+.option-btn:focus {
+    background-color: var(--clr-Light);
+    color: var(--clr-Dark);
+    transition: .4s ease;
+}
+
+/* Thank you begin */
+
+.thankyou-img {
+  margin: 0 auto;
+  width: min(80%, 140px);
+  animation: var(--keyframe)
+}
+
+.thankyou-review {
+  color: hsl(25, 97%, 45%);
+  background-color: var(--clr-Medium);
+  border-radius: 30px;
+  padding-inline: 1em;
+  padding-block: .4em;
+  text-align: center;
+  width: min(90%, 200px);
+  margin: 0 auto;
+  animation: var(--keyframe)
+}
+
+.thankyou-text-title {
+  color: white;
+  font-size: 1.7rem;
+  animation: var(--keyframe)
+}
+
+.thankyou-text {
+  color: var(--clr-Light);
+  font-size: 13px;
+  text-align: center;
+  width: 90%;
+  animation: var(--keyframe)
+}
+
+@keyframes smooth {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
